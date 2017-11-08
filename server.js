@@ -4,7 +4,7 @@ var app = express();
 var server = require('http').Server(app);
 var io = require('socket.io')(server);
 var users = [];
-var port = 8080;
+var port = process.env.PORT || 8080;
 
 app.use(express.static(path.join(__dirname, "public")));
 
